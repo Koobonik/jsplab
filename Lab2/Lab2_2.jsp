@@ -5,6 +5,7 @@
 <%@ page import="java.util.Date"%>
 <%@ page import="java.text.SimpleDateFormat"%>
 <html>
+<!-- 201504003 구본익 -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>세션</title>
