@@ -9,17 +9,19 @@
 <body>
 <br>
 <br>
-
-<%
-// hello 변수에 "while" 인지 "for" 받는다
-String hello = request.getParameter("wf"); %>
 <%
 // 비교하기 쉽게 변수로선언해둔다
 String w = "while";
 String f = "for";
+String hello = request.getParameter("wf");
+boolean a = false;
+// wf에 값이 있으면 null이 아니므로 true 값 변환
+if (request.getParameter("wf") != null){
+	a = true;
+}
 
 // 둘중에 하나라도 값이 같다면 실행
-if (request.getParameter("wf").equals("while") || request.getParameter("wf").equals("for")) {
+if (a) {
 
 	out.println("이름 : "+request.getParameter("name"));
 	%>
@@ -64,7 +66,7 @@ if (request.getParameter("wf").equals("while") || request.getParameter("wf").equ
 
 
 // 만약 선택하지 않을경우에는 선택하지 않았다는 문구를 출력한다.
-else if (request.getParameter("wf").equals("null") ) {
+else {
     out.print("라디오 버튼을 선택하지 않으셨습니다.");
 }
 
