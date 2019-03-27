@@ -33,6 +33,7 @@ color: black
 			<br>
 			<br>
 			<label>
+				<input type="hidden" name="wf" value="null" checked>
 				<input type="radio" name="wf" value="while">while문
 				<input type="radio" name="wf" value="for">for문
 			</label>

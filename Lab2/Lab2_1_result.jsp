@@ -10,7 +10,7 @@
 <br>
 <br>
 
-<% 
+<%
 // hello 변수에 "while" 인지 "for" 받는다
 String hello = request.getParameter("wf"); %>
 <%
@@ -19,7 +19,7 @@ String w = "while";
 String f = "for";
 
 // 둘중에 하나라도 값이 같다면 실행
-if ( hello.equals(w) || hello.equals(f)) {
+if (request.getParameter("wf").equals("while") || request.getParameter("wf").equals("for")) {
 
 	out.println("이름 : "+request.getParameter("name"));
 	%>
@@ -58,15 +58,15 @@ if ( hello.equals(w) || hello.equals(f)) {
 			<%
 		}
 	}
+
 	
 }
 
 
 // 만약 선택하지 않을경우에는 선택하지 않았다는 문구를 출력한다.
-else {
-out.print("라디오 버튼을 선택하지 않으셨습니다.");
+else if (request.getParameter("wf").equals("null") ) {
+    out.print("라디오 버튼을 선택하지 않으셨습니다.");
 }
-
 
 %>
 

@@ -32,7 +32,7 @@ color: blue
 <h1>201504003 구본익</h1>
 	<div id="container">
 		<h2>상품 구매 양식</h2>
-		<p style="color: red; font -size: 10px">모든 항목을 모두 채워주세요.</p>
+		<p style="color: red; font-size: 10px">모든 항목을 모두 채워주세요.</p>
 		<hr>
 		<form name="form" id="form" action="Lab1_result.jsp" method="post">
 			<p>이름</p>
