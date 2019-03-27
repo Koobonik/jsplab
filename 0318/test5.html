@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>계산기만들기</title>
+</head>
+<script type="text/javascript">
+//<![CDATA[
+function compute(f) {
+var res1 = f.exp1.value
+var res2 = f.exp2.value
+f.val.value = res1*res2
+}
+//]]>
+</script>
+<body>
+<b> onclick 예 : 계산기 만들기</b>
+<form name="cal">
+식 : <input type="text" name="exp1" value="" size=30>*
+<input type="text" name="exp2" value="" size=30>
+<br>
+<input type="button" value="계산하기" onclick="compute(this.form)">
+<br>
+값 <input type="text" name="val" value=" "size=10>
+</form>
+</body>
+</html>
