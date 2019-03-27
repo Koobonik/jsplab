@@ -63,7 +63,7 @@ if ( hello.equals(w) || hello.equals(f)) {
 
 
 // 만약 선택하지 않을경우에는 선택하지 않았다는 문구를 출력한다.
-if (request.getParameter("wf") == null) {
+else {
 out.print("라디오 버튼을 선택하지 않으셨습니다.");
 }
 
