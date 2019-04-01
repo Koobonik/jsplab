@@ -1,12 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<% request.setCharacterEncoding("utf-8"); %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%
+    String pagefile=request.getParameter("pagefile");
+%>
+<table width="960" border="1" align="center">
+    <tr>
+        <td height="43" colspan="3" align="right">
+            <jsp:include page="header.jsp"/>
+        </td>
+    </tr>
+    <tr >
+        <td height ="600" width="15%" align="center" valign="top">
+            <br> <jsp:include page="menu.jsp"/>
+        </td>
+        <td height ="600" colspan="2" align="center">
+            <jsp:include page='<%=pagefile+".jsp"%>'/>
+        </td>
+    </tr>
+    <tr>
+        <td width="100%" height="20" colspan="3" >
+            <jsp:include page ="footer.jsp"/>
+        </td>
+    </tr>
+</table>
