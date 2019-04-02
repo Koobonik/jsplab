@@ -10,7 +10,7 @@
 <form action="login_ok.jsp" method="post">
     아이디 <input type= "text" name="id">
     비밀번호 <input type="password" name="pwd">
-    <input type="submit" value="로그인"> <input type="button" value="회원가입" onclick="location.href = 'join.jsp'">
+    <input type="submit" value="로그인"> <input type="button" value="회원가입" onclick="location.href = 'main.jsp?pagefile=join'">
 </form>
 
 <% }else { //세션이 설정되지 않은 경우
