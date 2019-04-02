@@ -3,8 +3,9 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="./lab3.css">
 </head>
 <body>
-
+안녕하세요.
 </body>
 </html>

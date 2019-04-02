@@ -1,62 +1,65 @@
-<<%@ page language="java" pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%--
+  Created by IntelliJ IDEA.
+  User: dev_koo
+  Date: 02/04/2019
+  Time: 4:40 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page language="java" pageEncoding="UTF-8" %>
+<!doctype html>
+<html lang="ko">
 <head>
-    <title>asd</title>
-    <style>
-        <style>
-        #container {
-            width: 940px;
-            margin: 0px auto;
-            padding: 20px;
-            border: 1px solid #bcbcbc;
-        }
-
-        #header {
-            padding: 20px;
-            margin-bottom: 5px;
-            width: 900px;
-            height: 10px;
-            border: 1px solid #bcbcbc;
-            float: right;
-            text-align: right;
-        }
-
-        #headermenu {
-            padding: 20px;
-            margin-bottom: 5px;
-            width: 900px;
-            height: 50px;
-            float: left;
-            border: 1px solid #bcbcbc;
-        }
-
-        #content {
-            width: 900px;
-            padding: 20px;
-            margin-bottom: 20px;
-            float: right;
-            border: 1px solid #bcbcbc;
-        }
-
-        #footer {
-            clear: both;
-            padding: 20px;
-            border: 1px solid #bcbcbc;
-        }
-    </style>
+    <title>Lab3 201504003 구본익</title>
+    <link rel="stylesheet" href="./lab3.css">
+    <meta charset="utf-8">
 
 </head>
 <body>
-<%
-    String pagefile=request.getParameter("pagefile");
-    if(pagefile==null){
-        pagefile="intro";
-    }
-%>
-<jsp:forward page="template.jsp">
-    <jsp:param name="pagefile" value="<%=pagefile%>"/>
-</jsp:forward>
+<div id="container">
+
+    <!-- header 시작  -->
+    <div id="header">
+        <%@include file="header.jsp"%>
+
+
+    </div>
+    <!-- 위에 부분 -->
+    <div id="headermenu">
+        <a href="main.jsp">홈</a> | <a href="main.jsp?pagefile=list"> 개설강좌 </a>
+    </div>
+
+    <!-- header 끝  -->
+    <!--  content 시작  -->
+    <div id="content">
+        <%
+            String pagefile=request.getParameter("pagefile");
+            if(pagefile==null){
+                pagefile="intro";
+                out.print("안녕하세요.");
+            }
+            else
+            {
+
+                %>
+        <jsp:forward page="template.jsp">
+            <jsp:param name="pagefile" value="<%=pagefile%>"/>
+        </jsp:forward>
+        <%
+
+            }
+        %>
+
+    </div>
+    <!--  content 끝  -->
+
+    <!--  footer 시작   -->
+    <div id="footer">
+        <%@include file="footer.jsp"%>
+    </div>
+    <!--  footer 끝  -->
+
+</div>
+<script>
+</script>
 </body>
 </html>

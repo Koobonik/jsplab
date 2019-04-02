@@ -1,12 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!-- 201504003 구본익 -->
 <% request.setCharacterEncoding("utf-8"); %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<% String id = request.getParameter("id");
+    String pwd = request.getParameter("pwd");
+    if (id.equals("test") && pwd.equals("1234"))
+        session.setAttribute("id",id);
+//pageContext.forward("Lab2_2.jsp");
+    response.sendRedirect("main.jsp");
+%>
