@@ -26,7 +26,7 @@
     </div>
     <!-- 위에 부분 -->
     <div id="headermenu">
-        <a href="main.jsp">홈</a> | <a href="main.jsp?pagefile=list"> 개설강좌 </a>
+        <%@include file="menu.jsp"%>
     </div>
 
     <!-- header 끝  -->
