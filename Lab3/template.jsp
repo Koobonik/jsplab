@@ -20,13 +20,7 @@
     </div>
     <!-- 위에 부분 -->
     <div id="headermenu">
-        <a href="main.jsp">홈</a> | <a href="main.jsp?pagefile=list"> <% if (session.getAttribute("id") == null) {
-    %>개설강좌 <%
-    }
-    else {
-    %>수강신청<%
-        }
-    %> </a>
+        <%@include file="menu.jsp"%>
     </div>
 
     <!-- header 끝  -->
