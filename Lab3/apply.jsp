@@ -1,3 +1,4 @@
+<!-- 201504003 구본익 -->
 <%@ page language="java" pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("utf-8"); %>
 <% if (session.getAttribute("id") == null) { // 로그인 안되어있으면
