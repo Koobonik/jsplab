@@ -35,7 +35,6 @@
             String pagefile=request.getParameter("pagefile");
             if(pagefile==null){
                 pagefile="intro";
-                out.print("안녕하세요.23");
                 %>
         <jsp:include page='<%=pagefile+".jsp"%>'/>
         <%

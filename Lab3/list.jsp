@@ -111,6 +111,7 @@
 
 <script>
     function check() {
+        // 다 배열로 가져올 것임
         var values = document.getElementsByName("lecture");
         if (values[0].checked == false && values[1].checked == false && values[2].checked == false && values[3].checked == false){
             alert("하나 이상은 체크해주세요.")
@@ -118,17 +119,5 @@
         else {
             document.getElementById('form').submit();
         }
-        // for (i=0; i<values.length; i++){
-        //     if (values[i].checked){
-        //         alert(values[i].value);
-        //         count += 1;
-        //     }
-        //     else if (count == 0){
-        //         alert("하나 이상은 체크해주세요.")
-        //         break;
-        //     }
-        // }
-        // alert("이건되겠지");
-        // document.getElementById('form').submit();
     }
 </script>

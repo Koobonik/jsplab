@@ -35,7 +35,13 @@
             String pagefile=request.getParameter("pagefile");
             if(pagefile==null){
                 pagefile="intro";
-                out.print("안녕하세요.");
+                %>
+        <jsp:forward page="template.jsp">
+            <jsp:param name="pagefile" value="<%=pagefile%>"/>
+        </jsp:forward>
+
+        <%
+
             }
             else
             {

@@ -6,14 +6,14 @@
     <title>Title</title>
 </head>
 <body>
-<%if(session.getAttribute("id")==null){ %>
+<%if(session.getAttribute("id")==null){ // 로그인 안되어있는상태라면 %>
 <form action="login_ok.jsp" method="post">
     아이디 <input type= "text" name="id">
     비밀번호 <input type="password" name="pwd">
     <input type="submit" value="로그인"> <input type="button" value="회원가입" onclick="location.href = 'main.jsp?pagefile=join'">
 </form>
 
-<% }else { //세션이 설정되지 않은 경우
+<% }else { // 로그인이 되어있으면
 %>
 <form action="logout.jsp" method="post" >
     <%= session.getAttribute("id") %>님 로그인하셨습니다.
