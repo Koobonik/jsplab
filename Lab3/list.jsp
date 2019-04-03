@@ -55,7 +55,7 @@
     else { // 로그인 되어있으면
         %>
     <h1>수강신청</h1>
-<form action="result.jsp" method="post" name="form" id="form">
+<form action="apply.jsp" method="post" name="form" id="form">
 <table border="1">
 
     <thead>
@@ -70,32 +70,32 @@
     <tbody>
     <tr><td>IC015-A</td>
         <td>웹 시스템 설계 및 개발</td>
-        <td>3</td>
-        <td>3</td>
+        <td><input type="hidden" name="web_year" value=3>3</td>
+        <td><input type="hidden" name="web_int" value=3>3</td>
         <td><input type="checkbox" name="lecture" value="웹 시스템 설계 및 개발"></td>
 
     </tr>
     <tr>
         <td>IC147-A</td>
         <td>자바기반응용프로그래</td>
-        <td>2</td>
-        <td>3</td>
+        <td><input type="hidden" name="java_year" value=2>2</td>
+        <td><input type="hidden" name="java_int" value=3>3</td>
         <td><input type="checkbox" name="lecture" value="자바기반응용프로그램"></td>
 
     </tr>
     <tr>
         <td>IC136-A</td>
         <td>컴퓨터프로그래밍기초</td>
-        <td>1</td>
-        <td>3</td>
+        <td><input type="hidden" name="base_year" value=1>1</td>
+        <td><input type="hidden" name="base_int" value=3>3</td>
         <td><input type="checkbox" id="web" name="lecture" value="컴퓨터프로그래밍기초"></td>
 
     </tr>
     <tr>
         <td>IC066-A</td>
         <td>운영체제</td>
-        <td>3</td>
-        <td>3</td>
+        <td><input type="hidden" name="os_year" value=3>3</td>
+        <td><input type="hidden" name="os_int" value=3>3</td>
         <td><input type="checkbox" name="lecture" value="운영체제"></td>
 
     </tr>
@@ -116,6 +116,10 @@
         for (i=0; i<values.length; i++){
             if (values[i].checked){
                 alert(values[i].value);
+            }
+            else {
+                alert("하나 이상은 체크해주세요.")
+                break;
             }
         }
         alert("이건되겠지");
