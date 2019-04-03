@@ -56,7 +56,7 @@
         %>
     <h1>수강신청</h1>
 <form action="apply.jsp" method="post" name="form" id="form">
-<table border="1">
+<table border="1" style="width: 100%">
 
     <thead>
     <tr>
@@ -70,32 +70,32 @@
     <tbody>
     <tr><td>IC015-A</td>
         <td>웹 시스템 설계 및 개발</td>
-        <td><input type="hidden" name="web_year" value=3>3</td>
-        <td><input type="hidden" name="web_int" value=3>3</td>
+        <td><input type="hidden" name="lecture_year" value=3>3</td>
+        <td><input type="hidden" name="lecture_int" value=3>3</td>
         <td><input type="checkbox" name="lecture" value="웹 시스템 설계 및 개발"></td>
 
     </tr>
     <tr>
         <td>IC147-A</td>
-        <td>자바기반응용프로그래</td>
-        <td><input type="hidden" name="java_year" value=2>2</td>
-        <td><input type="hidden" name="java_int" value=3>3</td>
+        <td>자바기반응용프로그램</td>
+        <td><input type="hidden" name="lecture_year" value=2>2</td>
+        <td><input type="hidden" name="lecture_int" value=3>3</td>
         <td><input type="checkbox" name="lecture" value="자바기반응용프로그램"></td>
 
     </tr>
     <tr>
         <td>IC136-A</td>
         <td>컴퓨터프로그래밍기초</td>
-        <td><input type="hidden" name="base_year" value=1>1</td>
-        <td><input type="hidden" name="base_int" value=3>3</td>
-        <td><input type="checkbox" id="web" name="lecture" value="컴퓨터프로그래밍기초"></td>
+        <td><input type="hidden" name="lecture_year" value=1>1</td>
+        <td><input type="hidden" name="lecture_int" value=3>3</td>
+        <td><input type="checkbox" name="lecture" value="컴퓨터프로그래밍기초"></td>
 
     </tr>
     <tr>
         <td>IC066-A</td>
         <td>운영체제</td>
-        <td><input type="hidden" name="os_year" value=3>3</td>
-        <td><input type="hidden" name="os_int" value=3>3</td>
+        <td><input type="hidden" name="lecture_year" value=3>3</td>
+        <td><input type="hidden" name="lecture_int" value=3>3</td>
         <td><input type="checkbox" name="lecture" value="운영체제"></td>
 
     </tr>
@@ -112,17 +112,23 @@
 <script>
     function check() {
         var values = document.getElementsByName("lecture");
-        alert(values.length);
-        for (i=0; i<values.length; i++){
-            if (values[i].checked){
-                alert(values[i].value);
-            }
-            else {
-                alert("하나 이상은 체크해주세요.")
-                break;
-            }
+        if (values[0].checked == false && values[1].checked == false && values[2].checked == false && values[3].checked == false){
+            alert("하나 이상은 체크해주세요.")
         }
-        alert("이건되겠지");
-        document.getElementById('form').submit();
+        else {
+            document.getElementById('form').submit();
+        }
+        // for (i=0; i<values.length; i++){
+        //     if (values[i].checked){
+        //         alert(values[i].value);
+        //         count += 1;
+        //     }
+        //     else if (count == 0){
+        //         alert("하나 이상은 체크해주세요.")
+        //         break;
+        //     }
+        // }
+        // alert("이건되겠지");
+        // document.getElementById('form').submit();
     }
 </script>
