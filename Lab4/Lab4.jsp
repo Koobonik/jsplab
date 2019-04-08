@@ -19,6 +19,7 @@
         var frm = document.getElementById("form");
         if(frm.coffee.value == null || frm.coffee.value == ""){
             alert("커피를 선택해주세요.");
+            // return 으로 false 를 해줌으로서 submit이 진행되지 않도록 해준다.
             return false;
         }
 
@@ -27,9 +28,14 @@
             alert("사이즈를 선택해주세요.");
             return false;
         }
+
+        // 위 if 문에 해당사항이 없을경우 그대로 진행한다.
         return true;
     }
+
+
     function dreset() {
+        // real 에는 bool 형식으로 변수가 담길 것이다.
         var real = confirm("정말로 다시 쓰시겠습니까?");
         // 예 버튼 누를 시 그대로 진행
         if (real == true){
