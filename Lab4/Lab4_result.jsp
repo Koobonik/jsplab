@@ -18,6 +18,14 @@
 </head>
 <body>
 <jsp:getProperty name="Lab4" property="order_num"></jsp:getProperty>
+<br>
+<jsp:getProperty name="Lab4" property="coffee"></jsp:getProperty>
+<br>
+<jsp:getProperty name="Lab4" property="option"></jsp:getProperty>
+<br>
+<jsp:getProperty name="Lab4" property="size"></jsp:getProperty>
+<br>
+<jsp:getProperty name="Lab4" property="date"></jsp:getProperty>
 
 </body>
 </html>

@@ -14,14 +14,32 @@
 
 <script>
     function check() {
+
+        // 커피 선택하지 않을경우
         var frm = document.getElementById("form");
         if(frm.coffee.value == null || frm.coffee.value == ""){
             alert("커피를 선택해주세요.");
             return false;
         }
+
+        // 사이즈 선택하지 않을경우
+        if(frm.size.value == null || frm.size.value == "no"){
+            alert("사이즈를 선택해주세요.");
+            return false;
+        }
         return true;
     }
-    function reset() {
+    function dreset() {
+        var real = confirm("정말로 다시 쓰시겠습니까?");
+        // 예 버튼 누를 시 그대로 진행
+        if (real == true){
+            return true;
+        }
+
+        // 아니오 버튼 누를 시 취소
+        else {
+            return false;
+        }
 
     }
 
@@ -29,7 +47,7 @@
 
 <h1>음료 주문하기</h1>
 <hr>
-<form action="Lab4_result.jsp" method="post" id="form" onsubmit="return check()" onreset="">
+<form action="Lab4_result.jsp" method="post" id="form" onsubmit="return check()" onreset="return dreset()">
     커피종류
     <br>
     <input type="radio" name="coffee" value="아메리카노"> 아메리카노
@@ -37,15 +55,15 @@
     <input type="radio" name="coffee" value="카페모카"> 카페모카
     <br>
     옵션
-    <input type="radio" name="hotice" value="hot" checked> hot
-    <input type="radio" name="hotice" value="ice"> ice
+    <input type="radio" name="option" value="hot" checked> hot
+    <input type="radio" name="option" value="ice"> ice
     <br>
     사이즈
     <select name="size">
-        <option selected>선택하세요</option>
-        <option value="Tall">Tall</option>
-        <option value="Grandl">Grandl</option>
-        <option value="Venti">Venti</option>
+        <option value="no"selected>선택하세요</option>
+        <option name="size" value="Tall">Tall</option>
+        <option name="size" value="Grandl">Grandl</option>
+        <option name="size" value="Venti">Venti</option>
     </select>
     <br>
     <input type="submit" value="음료 주문하기">
