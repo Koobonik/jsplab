@@ -68,7 +68,7 @@
     <select name="size">
         <option value="no"selected>선택하세요</option>
         <option name="size" value="Tall">Tall</option>
-        <option name="size" value="Grandl">Grandl</option>
+        <option name="size" value="Grande">Grande</option>
         <option name="size" value="Venti">Venti</option>
     </select>
     <br>
