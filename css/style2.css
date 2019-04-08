@@ -1,0 +1,16 @@
+@CHARSET "EUC-KR";
+table,tr,td{
+    border : 1px solid black;
+    border-collapse : collapse;
+}
+.label{ /*class="label"인 엘리먼트에 적용*/
+    background-color : rgba(0,255,255,0.2);
+    /*투명도 0.2를 갖는 파랑색, 투명도 1: 완전불투명, 투명도 0: 완전투명*/
+}
+.label2{ /*class="label2"인 엘리먼트에 적용*/
+    background-color : rgba(0,255,255,0.2);
+    text-align : center;
+}
+.content{/*class="content"인 엘리먼트에 적용*/
+    background-color : rgba(0,255,255,0.1); /*투명도 0.1을 갖는 파랑색*/
+}
