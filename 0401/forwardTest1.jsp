@@ -9,8 +9,8 @@
     <title>Insert title here</title>
 </head>
 <body>
-<jsp:forward page='<%=request.getParameter("forwardPage") %>'>
-    <jsp:param value="02-1234-5678" name="tel"/>
+<jsp:forward page='<%=request.getParameter("forwardPage") /* page = "forwardTest2.jsp" */ %>'>
+    <jsp:param value="02-1234-5678" name="tel"/> <!-- °ªÀ» ³Ñ±è -->
 </jsp:forward>
 </body>
 </html>
