@@ -9,11 +9,13 @@
 <%
     String pageName = request.getParameter("pageName");
     String interfaceName = request.getParameter("interfaceName");
+
 %>
 
 <html>
 <head>
-    <link rel ="stylesheet" href = "style.css?ver=1" >
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel ="stylesheet" href = "style.css?after" >
     <meta name = "author" content = "Mincheol">
     <meta name ="keywords" content ="cafe 홈페이지 제작">
     <title><%=getServletInfo()%></title>
@@ -29,61 +31,27 @@
 <div class = "container">
     <!-- header 부분-->
     <div class = "header">
-        <!--
-        <div class = "logo">
-            <img src = "https://wikidocs.net/images/page/37661/logo_test.jpg" width = "180" height = "130" onclick="location.href = 'home.jsp?pageName=WEB-INF/User/home_content.jsp'">
-        </div>-->
-        <!-- 로그인 성공시 넘기기 -->
-        <jsp:include page= "<%=interfaceName%>"/>
-    </div>
 
 
-<!-- menu 부분-->
-    <!--<div class = "menu" style = "text-align: center; vertical-align: middle;">-->
-            <!--<a onclick="location.href = 'home.jsp?pageName=WEB-INF/User/terms_and_conditions.jsp'">
-                   STORY
-               </a>-->
-
-
-    <!-- nav-container 부분 -->
-
-    <div>
-        <nav>
-            <ul class = "nav-container">
-                <li class = "nav-item">
-                    <a>ABOUT</a>
-                    <ul>
-                        <li><a onclick = "location.href = 'home.jsp?pageName=WEB-INF/Introduction/terms_and_conditions.jsp'">STORY</a></li>
-                        <li><a href ="#">STAFF</a></li>
-                    </ul>
-                </li>
-
-                <li class = "nav-item">
-                    <a onclick="location.href = 'home.jsp?pageName=WEB-INF/Introduction/menu.jsp'">MENU</a>
-                </li>
-
-                <li class = "nav-item">
-                    <a onclick="location.href = 'home.jsp?pageName=WEB-INF/Introduction/directions.jsp'">PLACE</a>
-                </li>
-            <!--pointer 효과로 마우스 모양 변경 및 클릭시 content 부분 소개로 변경 style = "cursor:pointer"-->
-            <!--<li><a onclick = "location.href = 'home.jsp?pageName=WEB-INF/User/terms_and_conditions.jsp'">STORY</a>
-                       <ul>
-                           <li><a class ="#" href = "#">Test1</a></li>
-                           <li><a class ="#" href = "#">Test2</a></li>
-                           <li><a class ="#" href = "#">Test3</a></li>
-                           <li><a class ="#" href = "#">Test4</a></li>
-                       </ul>
-                   </li>-->
-            </ul>
-        </nav>
-    </div>
-        <!--
-        <div class = "category2">
-            <a onclick="location.href = 'home.jsp?pageName=WEB-INF/Introduction/menu.jsp'"> MENU </a>
+        <div class = "header_left">
+            <img src = "https://wikidocs.net/images/page/37661/costes_%EB%A1%9C%EA%B3%A0.PNG"width = "130" height = "130"
+                 style ="border-radius: 100px; -moz-border-radius: 1010px;-khtml-border-radius: 100px; -webkit-border-radius: 100px;">
         </div>
-        <div class= "category3">
-           <a onclick="location.href = 'home.jsp?pageName=WEB-INF/Introduction/directions.jsp'"> STORE </a>
-        </div>-->
+
+        <div class = "header_right">
+            <jsp:include page= "<%=interfaceName%>"/>
+            <div class = "header_nav">
+                    <ul class = "menu">
+                        <li><a onclick="location.href = 'home.jsp?pageName=WEB-INF/Introduction/company_introduction.jsp'">ABOUT</a></li>
+                        <li><a onclick="location.href = 'home.jsp?pageName=WEB-INF/Introduction/menu.jsp'">MENU</a></li>
+                        <li><a onclick="location.href = 'home.jsp?pageName=WEB-INF/Introduction/directions.jsp'">STORE</a></li>
+                    </ul>
+
+            </div>
+        <!-- 로그인 성공시 넘기기 -->
+
+        </div>
+    </div>
 
 
 
@@ -95,12 +63,23 @@
     </div>
 
          <!-- sidebar 부분 -->
-    <div class ="sidebar-container">
-        <div class = "sidebar-container-left">
-            공지사항
+    <div class ="sidebar_container">
+        <div class = "sidebar_container_left">
+            <div class = "sidebar_container_left_content">
+                <i class="fas fa-angle-double-right" style = "margin-left: -1.0em; margin-right: 0.5em;"></i>
+                공지사항
+            </div>
+            <div class = "sidebar_container_left_text_box">
+                <marquee direction=up scrollamount=1>방학기간에도 Open 하는데.. 안올꾸야..?</marquee>
+            </div>
         </div>
-        <div class = "sidebar-container-right">
-            게시판
+        <div class = "sidebar_container_right">
+            <div class = "sidebar_container_right_content">
+                <a href = "#">최근 게시판 이동하기</a>
+            </div>
+            <i class="fas fa-comment-dots" style = "margin-left: -1.0em; margin-right: 0.5em;"></i>
+
+
         </div>
 
 

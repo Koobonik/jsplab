@@ -22,9 +22,9 @@
 <div class = "content_container">
 
     <div class ="content_header" style = "text-align: left;">
-        <h1> 메뉴 </h1>
+        <h1> MENU </h1>
     </div>
-
+    <img src="https://wikidocs.net/images/page/37661/%E1%84%8F%E1%85%A9%E1%86%AF%E1%84%83%E1%85%B3%E1%84%87%E1%85%B3%E1%84%85%E1%85%AE%E1%84%8B%E1%85%A9%E1%86%AB%E1%84%83%E1%85%A5%E1%84%85%E1%85%A1%E1%86%A8.JPG" width ="100%" height ="500px" >
     <div class="content_body">
        <table>
            <tr>

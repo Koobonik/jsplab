@@ -12,9 +12,11 @@
 </head>
 <body>
 <div class = "user_interface">
-    <a onclick = "location.href = 'home.jsp?pageName=WEB-INF/User/login.jsp'">SIGN IN |
-    </a><a href = "#">MY PAGE</a> |
-    <a href = "index.jsp">HOME</a>
+    <ul>
+        <li><a onclick = "location.href = 'home.jsp?pageName=WEB-INF/User/login.jsp'">Sign In</a></li>
+        <li><a href = "#">My Page</a></li>
+        <li><a href = "index.jsp">Home</a></li>
+    </ul>
 </div>
 </body>
 </html>
